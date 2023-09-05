@@ -1,9 +1,16 @@
-learn
-=====
+Learn Cowboy Framework for Erlang
+===
 
-An OTP application
+A server for static files like HTML, CSS, JS and a websocket
 
-Build
------
+Well documented procesing of the information on the console
 
-    $ rebar3 compile
+## Build
+``` Erlang
+     rebar3 compile
+```
+## Run
+``` Erlang
+    rebar3 shell
+```
+
