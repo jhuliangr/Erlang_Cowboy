@@ -20,7 +20,7 @@ websocket_handle(Message, State=#state{}) ->
                 case Mensaje0 of
                     <<"close">> ->
                         NewState = State#state{auth=false},
-                        {[{text, "Session closed succesfully"}], NewState};
+                        {[{text, "Session closed successfully"}], NewState};
                     _-> 
                         io:format("Incomming message: ~p ~n", [Message]), % Close session 
                         websocket_Authenticated_handle({text, Mensaje0}, State)
@@ -93,7 +93,7 @@ websocket_Authenticated_handle({text, <<"close">>}, State) ->
     };
 websocket_Authenticated_handle(Frame = {text, Txt}, State) ->
     io:format("Handle called, frame is: ~p and state is: ~p~n", [Frame, State]),
-    {[{text, <<"Youe message has benn received succesfully, it is: ", Txt/binary>>}], State};
+    {[{text, <<"Youe message has benn received successfully, it is: ", Txt/binary>>}], State};
 websocket_Authenticated_handle(_Frame, State) ->
     {ok, State}.
 
